@@ -1,0 +1,324 @@
+.projects {
+    width: 90%;
+    margin: 30px auto 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.card {
+    background: #fff;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 15px 0 10px;
+    font-size: 26px;
+    color: purple;
+    font-style: italic;
+}
+
+.card p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    font-style: italic;
+}
+
+
+.portfolio-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 200px;
+    margin-bottom: 10px;
+    width: 100%;
+    justify-content: flex-start;
+    padding-left: 70px;
+}
+
+.portfolio-buttons button {
+    padding: 10px 20px;
+    color: white;
+    font-style: italic;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.portfolio-buttons .planning-btn {
+    background-color: purple;
+}
+
+.portfolio-buttons .architect-btn {
+    background-color: darkviolet;
+    color: black;
+}
+
+.portfolio-buttons .planning-btn:hover {
+    background-color: darkviolet;
+    color: black;
+}
+
+.portfolio-buttons .architect-btn:hover {
+    background-color: purple;
+    color: white;
+}
+
+.about-box {
+    text-align: center;
+}
+
+.about-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal2 {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal2 .modal-content {
+    width: 95vw;
+    max-width: none;
+    margin: 40px auto;
+    padding: 30px;
+
+}
+
+.planning-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.planning-item {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.planning-item img {
+    width: 95%;
+    max-width: 95%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+.planning-item h4,
+.planning-item p {
+    margin-left: 10px;
+}
+
+
+/* =========================
+   TABLET (768px - 1024px)
+========================= */
+@media (max-width: 1024px) {
+
+    .projects {
+        width: 95%;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .card img {
+        height: 200px;
+    }
+
+    .card h3 {
+        font-size: 22px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+    .portfolio-buttons {
+        margin-top: 100px;
+        padding-left: 30px;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .portfolio-buttons button {
+        padding: 10px 18px;
+        font-size: 13px;
+    }
+
+    .planning-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .planning-item img {
+        height: 150px;
+    }
+
+    .modal2 .modal-content {
+        width: 95%;
+        padding: 20px;
+    }
+}
+
+/* =========================
+   MOBILE (767px)
+========================= */
+@media (max-width: 767px) {
+
+    .projects {
+        width: 95%;
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .card img {
+        height: 220px;
+    }
+
+    .card h3 {
+        font-size: 20px;
+    }
+
+    .card p {
+        font-size: 14px;
+    }
+
+    .portfolio-buttons {
+        justify-content: center;
+        padding-left: 0;
+        margin-top: 120px;
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+
+    .portfolio-buttons button {
+        font-size: 12px;
+        padding: 9px 16px;
+    }
+
+    .about-img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .planning-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .planning-item img {
+        width: 90%;
+        height: 200px;
+    }
+
+    .modal2 .modal-content {
+        height: 90vh;
+        /* Set the modal height */
+        overflow-y: auto;
+        /* Enable vertical scrolling if content overflows */
+    }
+
+    .planning-item h4 {
+        font-size: 16px;
+        margin-top: 10px;
+        margin-bottom: 6px;
+        text-align: center;
+    }
+
+    .planning-item p {
+        font-size: 13px;
+        line-height: 1.5;
+        text-align: center;
+        padding: 0 8px;
+    }
+
+    @media (max-width: 480px) {
+        .projects {
+            width: 95%;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .card img {
+            height: 220px;
+        }
+
+        .card h3 {
+            font-size: 20px;
+        }
+
+        .card p {
+            font-size: 14px;
+        }
+
+        .portfolio-buttons {
+            justify-content: center;
+            padding-left: 0;
+            margin-top: 120px;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .portfolio-buttons button {
+            font-size: 12px;
+            padding: 9px 16px;
+        }
+
+        .about-img {
+            width: 80px;
+            height: 80px;
+        }
+
+        .planning-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .planning-item img {
+            width: 90%;
+            height: 200px;
+        }
+
+        .modal2 .modal-content {
+            height: 90vh;
+            overflow-y: auto;
+        }
+
+        .planning-item h4 {
+            font-size: 16px;
+            margin-top: 10px;
+            margin-bottom: 6px;
+            text-align: center;
+        }
+
+        .planning-item p {
+            font-size: 13px;
+            line-height: 1.5;
+            text-align: center;
+            padding: 0 8px;
+        }
+    }
+}

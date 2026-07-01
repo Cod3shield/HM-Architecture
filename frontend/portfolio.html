@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HM Architecture</title>
+
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="common.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+
+        <a href="index.html" class="logo">HM Architecture</a>
+
+        <!-- Hamburger Menu -->
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="comingsoon.html">Services</a>
+            <a href="comingsoon.html">Contact</a>
+        </nav>
+
+    </header>
+
+    <div class="portfolio-buttons">
+        <button class="planning-btn" onclick="openModal2()">Planning</button>
+        <button class="architect-btn" onclick="openModal('about')">Meet the Architect</button>
+    </div>
+
+    <section class="projects">
+
+        <div class="card">
+            <img src="design1.jpg" alt="Modern commercial building exterior">
+            <h3>Modern Commercial Building</h3>
+
+            <p>
+                A contemporary commercial building designed for businesses seeking functionality and modern aesthetics.
+                Featuring spacious interiors, large glass windows, and durable materials, this project provides a
+                comfortable environment for employees and clients. Its strategic layout enhances accessibility, natural
+                lighting, energy efficiency, and long-term value for commercial use and future business growth.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="desing2.jpg" alt="Contemporary bungalow residence">
+            <h3>Contemporary Bungalow Residence</h3>
+
+            <p>
+                A stylish single-story residence that combines elegance with practical living. Designed with open
+                spaces,
+                natural ventilation, and modern finishes, this home offers comfort and convenience for families.
+                Landscaped surroundings, energy-efficient features, and thoughtful architectural details create a
+                welcoming
+                atmosphere that balances beauty, functionality, and everyday relaxation.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="design3.jpg" alt="Modern three-storey residential building">
+            <h3>Modern Three-Storey Residence</h3>
+
+            <p>
+                A sophisticated three-storey home showcasing modern architecture and premium craftsmanship. The design
+                maximizes living space while maintaining comfort, privacy, and natural lighting. High-quality materials,
+                spacious interiors, and elegant exterior finishes provide a luxurious lifestyle for growing families in
+                an
+                urban environment.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="design4.jpg" alt="Modern commercial office complex">
+            <h3>Modern Commercial Office Complex</h3>
+
+            <p>
+                This modern commercial office complex is designed to support business growth through efficient layouts,
+                contemporary architecture, and accessible facilities. Spacious work areas, ample parking, and
+                sustainable
+                design features create a productive environment with long-term value for companies and clients.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="design5.jpg" alt="Modern tropical family residence">
+            <h3>Modern Tropical Family Residence</h3>
+
+            <p>
+                Designed for comfortable family living, this modern tropical residence combines natural ventilation,
+                elegant finishes, and functional spaces. Large windows invite sunlight while enhancing energy
+                efficiency.
+                The home features spacious bedrooms, open-plan living areas, and a warm, relaxing atmosphere.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="design6.jpg" alt="Contemporary luxury villa">
+            <h3>Contemporary Luxury Villa</h3>
+
+            <p>
+                This contemporary luxury villa showcases sleek architectural lines, expansive glass windows, and premium
+                exterior finishes. Designed for style and comfort, it offers generous living spaces, private bedrooms,
+                and
+                modern amenities with a refined lifestyle experience.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="design7.jpg" alt="Modern residential entrance gate">
+            <h3>Modern Residential Entrance Gate</h3>
+
+            <p>
+                This modern residential entrance gate combines security, functionality, and contemporary architectural
+                design. Featuring landscaped surroundings and a spacious driveway, it creates a welcoming first
+                impression
+                while ensuring safety and convenience.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="design8.jpg" alt="Contemporary two-storey duplex residence">
+            <h3>Contemporary Two-Storey Duplex Residence</h3>
+
+            <p>
+                This contemporary duplex residence offers practical living with modern architectural features and
+                efficient
+                space planning. Designed for multiple families or rental use, it provides comfort, flexibility, and
+                long-term residential value in an urban setting.
+            </p>
+        </div>
+
+        <div class="card">
+            <img src="design9.jpg" alt="Modern minimalist bungalow">
+            <h3>Modern Minimalist Bungalow</h3>
+
+            <p>
+                This modern minimalist bungalow emphasizes simplicity, comfort, and efficient space use. Clean
+                architectural
+                lines and natural materials create a bright and inviting home that blends seamlessly with its
+                surroundings.
+            </p>
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-about">
+                <h3>HM Architecture</h3>
+                <p>
+                    A design studio focused on creating innovative, functional, and sustainable architectural solutions
+                    that enhance the built environment and improve everyday living.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Help & Information</h3>
+
+                <a href="#" onclick="openModal('process')">Design Process</a>
+                <a href="#" onclick="openModal('consultation')">Project Consultation</a>
+                <a href="#" onclick="openModal('privacy')">Privacy Policy</a>
+                <a href="#" onclick="openModal('terms')">Terms of Service</a>
+            </div>
+
+            <!-- Modal -->
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDescription"></p>
+                </div>
+            </div>
+
+            <!-- Modal 2 (Planning / About Architect) -->
+            <div id="modal2" class="modal2">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal2()">&times;</span>
+
+                    <h2 id="modal2Title"></h2>
+                    <p id="modal2Description"></p>
+                </div>
+            </div>
+
+
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+
+                <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-x-twitter"></i> Twitter / X
+                </a>
+
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                </a>
+
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-youtube"></i> YouTube
+                </a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 HM Architecture. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="portfolio.js"></script>
+    <script src="modal.js"></script>
+    <script src="modal2.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HM Architecture</title>
+
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="common.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+
+        <a href="index.html" class="logo">HM Architecture</a>
+
+        <!-- Hamburger Menu -->
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="comingsoon.html">Services</a>
+            <a href="comingsoon.html">Contact</a>
+        </nav>
+
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <div class="slide active" style="background-image:url('airport1.png')"></div>
+
+        <div class="slide" style="background-image:url('building.png')"></div>
+
+        <div class="slide" style="background-image:url('seaport.png')"></div>
+
+        <div class="overlay"></div>
+
+        <div class="content">
+
+            <h1>Designing Spaces That Inspire Communities</h1>
+
+            <p>
+                We create thoughtful architectural solutions that bring
+                people together and shape vibrant, lasting places.
+            </p>
+
+            <button onclick="openModalExtension()">
+                View Projects
+                <span id="spinner" class="spinner"></span>
+            </button>
+
+        </div>
+
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+
+        <div class="dots"></div>
+
+    </section>
+
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+
+        <div class="blog-card">
+
+            <img src="australian design.png" alt="Blog Image">
+
+            <div class="blog-content">
+
+                <h2>Southern Horizon Cultural Centre</h2>
+
+                <p>
+                    The Southern Horizon Cultural Centre is a conceptual architectural landmark inspired by Australia's
+                    breathtaking coastlines, vast open landscapes, and commitment to sustainable development. Its
+                    flowing roof forms and curved exterior symbolize the movement of ocean waves, creating a bold yet
+                    harmonious relationship with the surrounding environment. Expansive glass façades maximize natural
+                    daylight while offering panoramic views that connect the interior with nature. Sustainable features
+                    such as solar energy systems, rainwater harvesting, green roofs, and natural ventilation reduce
+                    environmental impact and improve energy efficiency. The building is designed with flexible interior
+                    spaces that can accommodate exhibitions, performances, conferences, and community gatherings. Warm
+                    timber finishes and locally inspired materials create a welcoming atmosphere that reflects
+                    Australia's natural beauty and cultural diversity. The surrounding public plaza encourages social
+                    interaction and outdoor activities, making the centre a vibrant destination for visitors. Overall,
+                    the design represents innovation, sustainability, and a strong connection between architecture,
+                    people, and nature.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="blog-card reverse">
+
+            <img src="european design.png" alt="Blog Image">
+
+            <div class="blog-content">
+
+                <h2>Château Lumière Innovation Palace</h2>
+
+                <p>
+                    The Château Lumière Innovation Palace is a visionary architectural concept that combines the
+                    timeless elegance of European heritage with the sophistication of contemporary design. Inspired by
+                    the grandeur of historic European palaces and modern civic architecture, the building features
+                    sculptural forms, sweeping metallic surfaces, and expansive glass façades that create a distinctive
+                    and unforgettable appearance. Natural light enters through large skylights and floor-to-ceiling
+                    windows, producing bright and comfortable interior spaces while reducing energy consumption.
+                    Landscaped gardens, open courtyards, and pedestrian-friendly plazas surround the building,
+                    encouraging public engagement and creating a welcoming urban environment. Advanced sustainable
+                    technologies, including intelligent climate control, energy-efficient systems, and environmentally
+                    responsible construction materials, ensure long-term performance and environmental sustainability.
+                    Inside, multifunctional spaces support exhibitions, educational programs, conferences, and cultural
+                    events. The overall design symbolizes creativity, innovation, and architectural excellence,
+                    reflecting Europe's rich cultural legacy while embracing a forward-looking vision for modern public
+                    architecture.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Featured Projects Carousel -->
+    <section class="project-carousel">
+
+        <h2 id="featured-title">Featured Projects</h2>
+
+        <div class="carousel-track">
+
+            <div class="project-card">
+                <img src="interior1.png" alt="Waterfront Bliss">
+                <div class="project-info">
+                    <h3>Waterfront Bliss</h3>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="interior2.png" alt="The Grand View">
+                <div class="project-info">
+                    <h3>The Grand View</h3>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="interior3.png" alt="Urban Luxe">
+                <div class="project-info">
+                    <h3>Urban Luxe</h3>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="interior4.png" alt="Fallside Serenity">
+                <div class="project-info">
+                    <h3>Fallside Serenity</h3>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="interior5.png" alt="Classic London">
+                <div class="project-info">
+                    <h3>Classic London</h3>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="interior6.png" alt="Paris Horizon Suite">
+                <div class="project-info">
+                    <h3>Paris Horizon Suite</h3>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Cookie -->
+    <div class="cookie">
+
+        <p>
+            We use cookies to improve your browsing experience.
+        </p>
+
+        <div>
+            <button>Accept All</button>
+            <button>Reject All</button>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-about">
+                <h3>HM Architecture</h3>
+                <p>
+                    A design studio focused on creating innovative, functional, and sustainable architectural solutions
+                    that enhance the built environment and improve everyday living.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Help & Information</h3>
+
+                <a href="#" onclick="openModal('process')">Design Process</a>
+                <a href="#" onclick="openModal('consultation')">Project Consultation</a>
+                <a href="#" onclick="openModal('privacy')">Privacy Policy</a>
+                <a href="#" onclick="openModal('terms')">Terms of Service</a>
+            </div>
+
+            <!-- Modal -->
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDescription"></p>
+                </div>
+            </div>
+
+
+            <!-- Modal Extension -->
+            <div id="modalextension" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModalExtension()">&times;</span>
+                    <h2 id="modalextensionTitle"></h2>
+                    <div id="modalextensionDescription"></div>
+                </div>
+            </div>
+
+
+            <div class="footer-social">
+                <h3>Follow Us</h3>
+                <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+
+                <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+
+                <a href="https://www.twitter.com/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-x-twitter"></i> Twitter / X
+                </a>
+
+                <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                </a>
+
+                <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-youtube"></i> YouTube
+                </a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 HM Architecture. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+    <script src="modal.js"></script>
+    <script src="modalextension.js"></script>
+
+</body>
+
+</html>

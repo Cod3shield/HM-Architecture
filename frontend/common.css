@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 60px;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: purple;
+    font-style: italic;
+    text-decoration: none;
+}
+
+.logo:hover {
+    color: darkviolet;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #111;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.nav a:hover {
+    color: darkviolet;
+}
+
+.icons i {
+    margin-left: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.menu-toggle span {
+    width: 30px;
+    height: 3px;
+    background: #111;
+    transition: .3s;
+}
+
+.menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.footer {
+    background: purple;
+    color: #fff;
+    padding: 60px 20px 20px;
+    margin-top: 60px;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-about,
+.footer-links,
+.footer-social {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #bbb;
+    position: relative;
+    font-style: italic;
+}
+
+.footer p {
+    color: #bbb;
+    line-height: 1.6;
+    font-size: 14px;
+    font-style: italic;
+}
+
+.footer a {
+    display: block;
+    color: #bbb;
+    text-decoration: none;
+    margin: 6px 0;
+    font-size: 14px;
+    transition: 0.3s ease;
+    font-style: italic;
+}
+
+.footer a:hover {
+    color: #ffffff;
+    padding-left: 5px;
+}
+
+.footer-social i {
+    margin-right: 8px;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 15px;
+    font-size: 13px;
+    color: #888;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background: #fff;
+    width: 90%;
+    max-width: 500px;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content h2 {
+    color: purple;
+    font-style: italic;
+}
+
+.modal-content p {
+    color: #222;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.close:hover {
+    color: red;
+}
+
+.modal-content {
+    position: relative;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+/* ===================== */
+/* TABLET (≤ 1024px) */
+/* ===================== */
+@media (max-width: 1024px) {
+    header {
+        padding: 0 30px;
+        height: 70px;
+    }
+
+    .logo {
+        font-size: 26px;
+    }
+
+    nav a {
+        margin: 0 10px;
+        font-size: 15px;
+    }
+
+    .icons i {
+        font-size: 18px;
+        margin-left: 15px;
+    }
+}
+
+
+/* ===================== */
+/* MOBILE (≤ 768px) */
+/* ===================== */
+@media (max-width: 768px) {
+
+    header {
+        padding: 0 20px;
+        height: 65px;
+    }
+
+    /* hide default nav on mobile */
+    nav {
+        position: absolute;
+        top: 65px;
+        right: 0;
+        left: 0;
+        background: #fff;
+        flex-direction: column;
+        display: none;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    nav a {
+        display: block;
+        margin: 12px 0;
+        font-size: 16px;
+    }
+
+    /* show menu button */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* optional: icons adjust */
+    .icons i {
+        font-size: 18px;
+        margin-left: 10px;
+    }
+
+    /* when nav is active (toggle with JS) */
+    nav.active {
+        display: flex;
+    }
+}
+
+
+/* ===================== */
+/* SMALL MOBILE (≤ 480px) */
+/* ===================== */
+@media (max-width: 480px) {
+    .logo {
+        font-size: 22px;
+    }
+
+    header {
+        padding: 0 15px;
+    }
+
+    nav a {
+        font-size: 15px;
+    }
+}
