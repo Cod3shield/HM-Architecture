@@ -60,21 +60,22 @@
 
 .portfolio-buttons .planning-btn {
     background-color: purple;
+    color: #777;
 }
 
 .portfolio-buttons .architect-btn {
-    background-color: darkviolet;
-    color: black;
+    background-color: #222;
+    color: white;
 }
 
 .portfolio-buttons .planning-btn:hover {
     background-color: darkviolet;
-    color: black;
+    color: white;
 }
 
 .portfolio-buttons .architect-btn:hover {
-    background-color: purple;
-    color: white;
+    background-color: #666;
+    color: black;
 }
 
 .about-box {
